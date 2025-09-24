@@ -11,20 +11,6 @@ export function formatCurrency(value: number | null, showSymbol?: string | false
   return formatted;
 }
 
-/**
- * parseCurrencyString
- *
- * - Accepts pasted strings like "€1,234.5", "1.234,5", "1234,5", "1234.5"
- * - Strategy:
- *   * If both '.' and ',' present: treat '.' as thousands and ',' as decimal -> remove dots, replace comma with dot (JS decimal)
- *   * If only ',' present: replace ',' with '.' and parse
- *   * If only '.' present:
- *       - If there are multiple '.' characters -> remove them (treat as thousands)
- *       - If single '.' and it has 0-2 chars after it -> treat as decimal
- *       - else treat '.' as thousands
- *   * Otherwise parse as integer
- * - Returns null if cannot parse
- */
 export function parseCurrencyString(input: string): number | null {
   if (!input) return null;
   let s = input.trim();
