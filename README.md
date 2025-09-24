@@ -6,7 +6,6 @@ This repo contains a reusable `CurrencyInput` React component that:
 - Interprets the **numpad decimal key** as the decimal separator (`,`), regardless of keyboard layout.
 - Is a **controlled component**: `value: number | null`, `onChange: (value) => void`.
 
-This implementation was built to satisfy the assignment "Create a Currency Number Input field in React". :contentReference[oaicite:1]{index=1}
 
 ## Setup
 
